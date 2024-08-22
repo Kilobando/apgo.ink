@@ -339,36 +339,52 @@
         /* Footer */
         .footer {
             background-color: #000000;
-            text-align: left;
-            padding: 60px 20px;
+            padding: 40px 20px;
             margin-top: 60px;
             width: 100%;
             box-sizing: border-box;
             border-top: 2px solid #333;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
         }
 
-        .footer p {
-            margin: 0;
-            font-size: 1.2em;
-            color: #888888;
-            width: 100%;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            padding: 20px;
+            min-width: 200px;
             box-sizing: border-box;
         }
 
-        .footer a {
+        .footer-column h3 {
+            color: #ffcc00;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .footer-column a {
             display: block;
             margin: 10px 0;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #ffcc00;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .footer a:hover {
+        .footer-column a:hover {
             color: #ff9900;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            color: #888888;
+            font-size: 1em;
         }
 
         /* Smooth scroll */
@@ -427,7 +443,6 @@
 
             .footer {
                 padding: 40px 20px;
-                grid-template-columns: 1fr;
             }
 
             .footer a {
@@ -436,6 +451,16 @@
 
             .footer p {
                 font-size: 1em;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-column {
+                text-align: center;
+                margin-bottom: 20px;
             }
         }
 
@@ -461,7 +486,7 @@
         <!-- Mission Statement -->
         <section id="mission" class="section light">
             <h2>Mission Statement</h2>
-            <p>Populi Advocātiō is a powerful, upcoming organization. No matter if <span class="highlight">criminal or innocent</span>, <span class="highlight">civilian or immigrant</span>, <span class="highlight">Male or Female</span>, we are your advocate.</p>
+            <p>Populi Advocātiō is a powerful, upcoming organization. No matter if <span class="highlight">criminal or innocent</span>, <span class="highlight">civilian or immigrant</span>, <span class="highlight">individual or society</span>, we are your advocate.</p>
         </section>
 
         <!-- Timeline -->
@@ -635,27 +660,29 @@
 
     <!-- Footer -->
     <div class="footer">
-        <div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
+                <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
+            </div>
+            <div class="footer-column">
+                <h3>Organisation</h3>
+                <a href="https://apgo.ink/career" target="_blank">Career Options</a>
+                <a href="https://apgo.ink/imprint" target="_blank">Imprint and About Us</a>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
+                <a href="https://apgo.ink/ccs" target="_blank">Crypto Cipher Studios Information</a>
+            </div>
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <a href="#mission">Back to Top</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
-        </div>
-        <div>
-            <h3>Legal</h3>
-            <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
-            <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
-        </div>
-        <div>
-            <h3>Organisation</h3>
-            <a href="https://apgo.ink/career" target="_blank">Career Options</a>
-            <a href="https://apgo.ink/imprint" target="_blank">Imprint and About Us</a>
-        </div>
-        <div>
-            <h3>Support</h3>
-            <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
-            <a href="https://apgo.ink/ccs" target="_blank">Crypto Cipher Studios Information</a>
-        </div>
-        <div>
-            <h3>Navigation</h3>
-            <a href="#mission">Back to Top</a>
         </div>
     </div>
 

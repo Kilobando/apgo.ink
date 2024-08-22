@@ -3,38 +3,684 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page for apgo.ink</title>
+    <title>Populi Advocātiō</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
+
+        h1, h2, h3 {
+            color: #ffcc00;
+            text-shadow: 0px 0px 6px rgba(255, 204, 0, 0.4);
+            margin: 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
         h1 {
-            color: #3498db;
+            font-size: 3.5em;
+            margin: 0.5em 0;
         }
+
+        h2 {
+            font-size: 2.8em;
+            margin: 0.5em 0;
+        }
+
+        h3 {
+            font-size: 2.2em;
+            margin: 0.5em 0;
+        }
+
         p {
+            margin: 0.5em 0;
             font-size: 1.2em;
-            color: #2c3e50;
+            width: 100%;
+            box-sizing: border-box;
+            color: #e0e0e0;
         }
+
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff9900;
+        }
+
         .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1640040262569-b22fe75abfa1?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
             width: 80%;
             margin: auto;
+            box-sizing: border-box;
+        }
+
+        .section {
+            margin: 0;
+            padding: 80px 20px;
+            transition: background-color 0.3s ease-in-out;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .section.light {
+            background-color: #1a1a1a;
+        }
+
+        .section.dark {
+            background-color: #0d0d0d;
+        }
+
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar a {
+            margin: 0 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .navbar a i {
+            margin-right: 8px;
+        }
+
+        /* Timeline Container */
+        .timeline-container {
+            position: relative;
+            margin: 60px 0;
+            padding: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
             overflow: hidden;
         }
-        footer {
-            margin-top: 20px;
-            color: #95a5a6;
+
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #ffcc00;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
         }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item-content {
+            padding: 20px;
+            background-color: #333;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-item-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .timeline-item-content h3 {
+            color: #ffcc00;
+            margin-top: 0;
+            font-size: 1.6em;
+        }
+
+        .timeline-item-content p {
+            font-size: 1.1em;
+        }
+
+        .timeline-item-content::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 15px;
+            right: -15px;
+            border-style: solid;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent #333;
+        }
+
+        .timeline-item.left .timeline-item-content::after {
+            left: -15px;
+            right: auto;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent #333 transparent transparent;
+        }
+
+        /* Timeline Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .tab.active {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        /* Core Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .value-card {
+            background-color: rgba(31, 31, 31, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .value-card h3 {
+            color: #ffcc00;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        /* Statistics Section */
+        .statistics {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #1f1f1f;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .statistics h3 {
+            color: #ffcc00;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .statistics p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        .statistics strong {
+            color: #ffcc00;
+        }
+
+        /* Resources Section */
+        .resources {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #1a1a1a;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .resources h3 {
+            color: #ffcc00;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .resources p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        .resources strong {
+            color: #ffcc00;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000000;
+            text-align: left;
+            padding: 60px 20px;
+            margin-top: 60px;
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 2px solid #333;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #888888;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff9900;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                padding: 20px;
+                text-align: left;
+            }
+
+            .timeline-container::after {
+                left: 8%;
+            }
+
+            .timeline-item-content::after {
+                top: -15px;
+                right: 50%;
+                left: auto;
+                transform: rotate(90deg);
+            }
+
+            .timeline-item.left,
+            .timeline-item.right {
+                left: 0;
+            }
+
+            .navbar {
+                padding: 15px;
+            }
+
+            .navbar a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+                padding: 20px;
+            }
+
+            .footer {
+                padding: 40px 20px;
+                grid-template-columns: 1fr;
+            }
+
+            .footer a {
+                font-size: 1em;
+            }
+
+            .footer p {
+                font-size: 1em;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to apgo.ink</h1>
-        <p>This is a test page to verify that the GitHub Pages and Cloudflare setup is working correctly.</p>
-        <footer>
-            <p>&copy; 2024 apgo.ink | All Rights Reserved</p>
-        </footer>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#mission"><i class="fas fa-bullseye"></i>Mission</a>
+        <a href="#timeline"><i class="fas fa-history"></i>Timeline</a>
+        <a href="#values"><i class="fas fa-balance-scale"></i>Values</a>
+        <a href="#statistics"><i class="fas fa-chart-bar"></i>Statistics</a>
+        <a href="#resources"><i class="fas fa-book"></i>Resources</a>
     </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>We Advocate for the People</h1>
+    </div>
+
+    <div class="container">
+        <!-- Mission Statement -->
+        <section id="mission" class="section light">
+            <h2>Mission Statement</h2>
+            <p>Populi Advocātiō is a powerful, upcoming organization. No matter if <span class="highlight">criminal or innocent</span>, <span class="highlight">civilian or immigrant</span>, <span class="highlight">Male or Female</span>, we are your advocate.</p>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline" class="section dark">
+            <h2>Founding and Development Timeline</h2>
+            <div class="tabs">
+                <div class="tab active" data-year="2023">2023</div>
+                <div class="tab" data-year="2024">2024</div>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline" id="timeline-2023">
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>January 22nd, 2023</h3>
+                            <p>Populi Advocātiō was founded as a Christian organization by Kilo and Alpha.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>January 30th, 2023</h3>
+                            <p>Falcon joined and became a co-founder.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>March 28th, 2023</h3>
+                            <p>The first stage of planning for a future team began.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>April 9th, 2023</h3>
+                            <p>Initial ideas about geopolitics were discussed.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>August 23rd, 2023</h3>
+                            <p>The first version of the team was established.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>September 9th, 2023</h3>
+                            <p>Plans for a future chat application program were introduced.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>September 24th, 2023</h3>
+                            <p>The organization’s interest in journalism was sparked.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>October 1st, 2023</h3>
+                            <p>Completed key studies on history and geopolitics; new team members joined.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>October 6th, 2023</h3>
+                            <p>Development of the chat application began.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>November 28th, 2023</h3>
+                            <p>The chat project was postponed; ideas about a future company were conceptualized.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline" id="timeline-2024" style="display:none;">
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>January 5th, 2024</h3>
+                            <p>The organization’s interest in journalism deepened, with private articles written for internal evaluation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>March 6th, 2024</h3>
+                            <p>Saba was recruited into the team.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>March 10th, 2024</h3>
+                            <p>The idea of establishing a new company was discussed.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>March 24th, 2024</h3>
+                            <p>Continued work on the chat application and website.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-item-content">
+                            <h3>May 9th, 2024</h3>
+                            <p>Began writing private works and documentaries to train and educate the team.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-item-content">
+                            <h3>August 7th, 2024</h3>
+                            <p>Crypto Cipher Studios was established legally, and a partnership was formed with Populi Advocātiō.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section id="values" class="section light">
+            <h2>Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Morality</h3>
+                    <p>Adherence to a strict moral code in all actions and decisions.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Loyalty</h3>
+                    <p>Commitment to the organization and the people it serves.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Commitment</h3>
+                    <p>Dedication to the mission and relentless pursuit of truth.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Transparency</h3>
+                    <p>Openness and honesty in communication, ensuring clarity in sources and intentions.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Integrity</h3>
+                    <p>Maintaining ethical standards and integrity in all dealings.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>Continuously striving for innovation and adapting to changing dynamics.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Courage</h3>
+                    <p>Boldly confronting challenges and speaking truth to power without fear.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Unity</h3>
+                    <p>Promoting unity and collaboration within the organization and the broader community.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Statistics -->
+        <section id="statistics" class="section dark">
+            <h2>Open Source Statistics</h2>
+            <div class="statistics">
+                <h3>Placeholder for Future Statistics</h3>
+                <p>Populi Advocātiō will provide a comprehensive set of open source statistics here. Stay tuned for more information as we gather and present data that matters.</p>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section id="resources" class="section light">
+            <h2>Resources</h2>
+            <div class="resources">
+                <h3>Placeholder for Resources</h3>
+                <p>This section will eventually include various resources provided by Populi Advocātiō. More information will be added soon.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div>
+            <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
+        </div>
+        <div>
+            <h3>Legal</h3>
+            <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
+            <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
+        </div>
+        <div>
+            <h3>Organisation</h3>
+            <a href="https://apgo.ink/career" target="_blank">Career Options</a>
+            <a href="https://apgo.ink/imprint" target="_blank">Imprint and About Us</a>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
+            <a href="https://apgo.ink/ccs" target="_blank">Crypto Cipher Studios Information</a>
+        </div>
+        <div>
+            <h3>Navigation</h3>
+            <a href="#mission">Back to Top</a>
+        </div>
+    </div>
+
+    <!-- Toggle Timeline Script -->
+    <script>
+        // Toggle between 2023 and 2024 timelines
+        const tabs = document.querySelectorAll('.tab');
+        const timeline2023 = document.getElementById('timeline-2023');
+        const timeline2024 = document.getElementById('timeline-2024');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                if (tab.dataset.year === '2023') {
+                    timeline2023.style.display = 'block';
+                    timeline2024.style.display = 'none';
+                } else {
+                    timeline2023.style.display = 'none';
+                    timeline2024.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

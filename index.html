@@ -120,7 +120,6 @@
         .navbar {
             background-color: #1a1a1a;
             padding: 20px;
-            text-align: center;
             width: 100%;
             box-sizing: border-box;
             position: fixed;
@@ -128,6 +127,13 @@
             left: 0;
             z-index: 1000;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img.logo {
+            height: 50px;
+            margin-right: 20px;
         }
 
         .navbar a {
@@ -352,31 +358,34 @@
             flex-wrap: wrap;
             max-width: 1200px;
             margin: auto;
+            text-align: left;
         }
 
-        .footer-column {
+        .footer-section {
             flex: 1;
             padding: 20px;
             min-width: 200px;
             box-sizing: border-box;
         }
 
-        .footer-column h3 {
+        .footer-section h3 {
             color: #ffcc00;
             font-size: 1.5em;
             margin-bottom: 15px;
+            text-align: left;
         }
 
-        .footer-column a {
+        .footer-section a {
             display: block;
             margin: 10px 0;
             font-size: 1.1em;
             color: #ffcc00;
             text-decoration: none;
             transition: color 0.3s ease;
+            text-align: left;
         }
 
-        .footer-column a:hover {
+        .footer-section a:hover {
             color: #ff9900;
         }
 
@@ -431,6 +440,10 @@
                 padding: 15px;
             }
 
+            .navbar img.logo {
+                height: 40px;
+            }
+
             .navbar a {
                 margin: 0 10px;
                 font-size: 1em;
@@ -458,7 +471,7 @@
                 align-items: center;
             }
 
-            .footer-column {
+            .footer-section {
                 text-align: center;
                 margin-bottom: 20px;
             }
@@ -470,6 +483,8 @@
 
     <!-- Navbar -->
     <div class="navbar">
+        <!-- Logo -->
+        <img src="98733caf1db1df4b948911f85b959344.png" alt="Logo" class="logo">
         <a href="#mission"><i class="fas fa-bullseye"></i>Mission</a>
         <a href="#timeline"><i class="fas fa-history"></i>Timeline</a>
         <a href="#values"><i class="fas fa-balance-scale"></i>Values</a>
@@ -661,22 +676,22 @@
     <!-- Footer -->
     <div class="footer">
         <div class="footer-content">
-            <div class="footer-column">
+            <div class="footer-section">
                 <h3>Legal</h3>
                 <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
                 <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
             </div>
-            <div class="footer-column">
+            <div class="footer-section">
                 <h3>Organisation</h3>
                 <a href="https://apgo.ink/career" target="_blank">Career Options</a>
                 <a href="https://apgo.ink/imprint" target="_blank">Imprint and About Us</a>
             </div>
-            <div class="footer-column">
+            <div class="footer-section">
                 <h3>Support</h3>
                 <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
                 <a href="https://apgo.ink/ccs" target="_blank">Crypto Cipher Studios Information</a>
             </div>
-            <div class="footer-column">
+            <div class="footer-section">
                 <h3>Navigation</h3>
                 <a href="#mission">Back to Top</a>
             </div>

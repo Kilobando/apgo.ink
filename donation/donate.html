@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Populi Advocātiō</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Import particles.js for background decoration -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Particle.js Background */
+        #particles-js {
+            position: fixed;
+            top: 100vh;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #007BFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e8eaf6;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            color: #333;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .donation-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 45%;
+            transition: transform 0.3s ease;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .donation-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .donation-card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .donation-address {
+            font-weight: bold;
+            color: #007BFF;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .donation-address:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        .footer a:hover {
+            color: #007BFF;
+        }
+
+        .footer p {
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Particle.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>
+            <a href="https://apgo.ink">Home</a>
+            <a href="https://apgo.ink/contactus" target="_blank">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Support Our Mission</h1>
+            <p>Your contributions help us continue providing valuable insights and research.</p>
+        </div>
+    </div>
+
+    <!-- Donation Section -->
+    <section class="section">
+        <h2>Make a Donation</h2>
+        <p>You can support Populi Advocātiō using any of the following cryptocurrency options. Click on any address to copy it to your clipboard.</p>
+        
+        <div class="donation-section">
+            <div class="donation-card">
+                <h3>Bitcoin</h3>
+                <p class="donation-address" onclick="copyToClipboard('bc1qvu4q326jhrjt8cdnhuz7xx2nvckqfxzenz70cu')">bc1qvu4q326jhrjt8cdnhuz7xx2nvckqfxzenz70cu</p>
+            </div>
+            <div class="donation-card">
+                <h3>Ethereum</h3>
+                <p class="donation-address" onclick="copyToClipboard('0x7CCB96AA9221AAE4FC8C015a35515c4395bd0dD4')">0x7CCB96AA9221AAE4FC8C015a35515c4395bd0dD4</p>
+            </div>
+            <div class="donation-card">
+                <h3>XRP</h3>
+                <p class="donation-address" onclick="copyToClipboard('r9kf8WVDj9WJnDYsvFqBtgMrgSswpssoCi')">r9kf8WVDj9WJnDYsvFqBtgMrgSswpssoCi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
+        <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Function to copy address to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Address copied to clipboard!");
+            }).catch(err => {
+                console.log('Something went wrong', err);
+            });
+        }
+
+        // Particles.js background decoration
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 5,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+</body>
+</html>

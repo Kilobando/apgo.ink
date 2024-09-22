@@ -6,271 +6,266 @@
     <title>Privacy Policy - Populi Advocātiō</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Import particles.js for background decoration -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <style>
-        /* Global Styles */
-        body {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            font-family: 'Roboto', sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            position: relative;
             overflow-x: hidden;
-            box-sizing: border-box;
-            background-image: url('https://images.unsplash.com/photo-1640040159521-8a1b5d323181?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
         }
 
-        h1, h2, h3 {
-            color: #ffcc00;
-            text-shadow: 0px 0px 6px rgba(255, 204, 0, 0.4);
-            margin: 0;
-            padding: 10px;
+        /* Particle.js Background */
+        #particles-js {
+            position: fixed;
+            top: 100vh;
             width: 100%;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0.5em 0;
-        }
-
-        h2 {
-            font-size: 2.2em;
-            margin: 0.5em 0;
-        }
-
-        h3 {
-            font-size: 1.8em;
-            margin: 0.5em 0;
-        }
-
-        p {
-            margin: 0.5em 0;
-            font-size: 1.2em;
-            width: 100%;
-            box-sizing: border-box;
-            color: #e0e0e0;
-        }
-
-        a {
-            color: #ffcc00;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #ff9900;
-        }
-
-        ul {
-            margin-left: 20px;
-            padding-left: 20px;
-            list-style: disc;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: rgba(26, 26, 26, 1);
-            border-radius: 10px;
-        }
-
-        .section {
-            margin: 0;
-            padding: 40px 20px;
-            transition: background-color 0.3s ease-in-out;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .highlight {
-            color: #ffcc00;
-            font-weight: bold;
+            height: 100vh;
+            z-index: -1;
         }
 
         /* Navbar */
         .navbar {
-            background-color: rgba(26, 26, 26, 0.9);
+            background-color: #ffffff;
             padding: 20px;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
+            width: 100%;
             top: 0;
-            left: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .navbar a {
-            margin: 0 20px;
-            color: #ffffff;
+            color: #333;
             text-decoration: none;
-            font-size: 1.2em;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .navbar a:hover {
-            color: #ffcc00;
+            color: #007BFF;
         }
 
-        .navbar a i {
-            margin-right: 8px;
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #e8eaf6;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #333;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 20px;
+            text-align: left;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #f4f4f9;
+        }
+
+        .section h2 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .section ol {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+
+        .section ol li {
+            margin-bottom: 15px;
         }
 
         /* Footer */
         .footer {
-            background-color: #000000;
-            padding: 60px 20px;
-            margin-top: 60px;
-            width: 100%;
-            box-sizing: border-box;
-            border-top: 2px solid #333;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .footer-column {
-            flex: 1;
-            padding: 20px;
-            min-width: 200px;
-            box-sizing: border-box;
-        }
-
-        .footer-column h3 {
-            color: #ffcc00;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-
-        .footer-column a {
-            display: block;
-            margin: 10px 0;
-            font-size: 1.1em;
-            color: #ffcc00;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column a:hover {
-            color: #ff9900;
-        }
-
-        .footer-bottom {
+            background-color: #333;
+            color: #ffffff;
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px;
-            color: #888888;
-            font-size: 1em;
         }
 
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .footer-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-column {
-                text-align: center;
-                margin-bottom: 20px;
-            }
+        .footer a:hover {
+            color: #007BFF;
         }
+
+        .footer p {
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        /* Background color shift for visibility after first scroll */
+        .section.scrolled {
+            background-color: #ffffff;
+            padding: 100px 20px;
+            margin-top: 0;
+        }
+
     </style>
 </head>
 <body>
 
+    <!-- Particle.js Background -->
+    <div id="particles-js"></div>
+
     <!-- Navbar -->
     <div class="navbar">
-        <a href="https://apgo.ink"><i class="fas fa-home"></i>Home</a>
+        <div>
+            <a href="https://apgo.ink">Home</a>
+            <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
+            <a href="https://apgo.ink/contactus" target="_blank">Contact</a>
+        </div>
     </div>
 
-    <!-- Content Section -->
-    <div class="container">
-        <section class="section light">
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
             <h1>Privacy Policy</h1>
-
-            <h2>1. Introduction</h2>
-            <p>At Populi Advocātiō, your privacy is of utmost importance to us. We are committed to protecting your personal information and ensuring a safe and secure experience while using our resources. This Privacy Policy outlines our practices and policies regarding data collection, usage, and protection.</p>
-
-            <h2>2. No Collection of Personal Information</h2>
-            <p>Populi Advocātiō does not collect, store, or process any personal information from our users. We believe that your privacy is a fundamental right, and as such, we do not engage in any form of data collection. Our focus is solely on providing you with valuable, well-researched resources in the fields of finance, geopolitics, and journalism.</p>
-            <ul>
-                <li><span class="highlight">No Accounts or Profiles:</span> We do not require you to create an account, profile, or provide any personal details to access our resources.</li>
-                <li><span class="highlight">No Tracking or Analytics:</span> We do not use tracking mechanisms, cookies, or analytics tools that gather personal data. Your activity on our platform remains anonymous and private.</li>
-            </ul>
-
-            <h2>3. Use of Cloudflare Services</h2>
-            <p>While we do not collect any personal information, please be aware that Populi Advocātiō uses Cloudflare services to enhance the security and performance of our website. Cloudflare may process limited technical data (such as IP addresses) as part of its service, but this is outside of our control and is governed by Cloudflare’s own privacy practices.</p>
-            <ul>
-                <li><span class="highlight">Cloudflare’s Role:</span> Cloudflare acts as a content delivery network (CDN) and provides security measures to protect our website from malicious activities. Any data processed by Cloudflare is subject to their privacy policy, not ours.</li>
-                <li><span class="highlight">Your Privacy:</span> We emphasize that we do not have access to any data that may be processed by Cloudflare. Populi Advocātiō does not use, store, or share any personal information.</li>
-            </ul>
-
-            <h2>4. Focus on Resource Delivery</h2>
-            <p>Our mission at Populi Advocātiō is to deliver rich, reliable, and well-researched resources to our users. We do not require any personal information to fulfill this mission. Our content is freely accessible, and our focus remains on providing valuable insights in finance, geopolitics, and journalism.</p>
-            <ul>
-                <li><span class="highlight">Transparency:</span> We maintain full transparency in our operations and are committed to upholding the highest standards of integrity and trust.</li>
-                <li><span class="highlight">No Third-Party Sharing:</span> Since we do not collect personal information, there is nothing to share with third parties. Your privacy is fully respected.</li>
-            </ul>
-
-            <h2>5. Changes to This Policy</h2>
-            <p>Populi Advocātiō reserves the right to update or modify this Privacy Policy at any time. Any changes will be reflected on this page, and the date of the latest update will be indicated at the bottom of the policy. We encourage you to review this policy periodically to stay informed about how we are protecting your privacy.</p>
-
-            <h2>6. Contact Information</h2>
-            <p>If you have any questions or concerns about this Privacy Policy, or if you need further information, please contact us at <a href="mailto:contact@populiadvocatio.com">contact@populiadvocatio.com</a>. We are here to address any issues you may have and ensure that your experience with Populi Advocātiō remains secure and private.</p>
-        </section>
+        </div>
     </div>
+
+    <!-- Privacy Policy Content -->
+    <section class="section scrolled">
+        <h2>1. Introduction</h2>
+        <p>At Populi Advocātiō, your privacy is of utmost importance to us. We are committed to protecting your personal information and ensuring a safe and secure experience while using our resources. This Privacy Policy outlines our practices and policies regarding data collection, usage, and protection.</p>
+
+        <h2>2. No Collection of Personal Information</h2>
+        <p>Populi Advocātiō does not collect, store, or process any personal information from our users. We believe that your privacy is a fundamental right, and as such, we do not engage in any form of data collection. Our focus is solely on providing you with valuable, well-researched resources in the fields of finance, geopolitics, and journalism.</p>
+        <ol>
+            <li>No Accounts or Profiles: We do not require you to create an account, profile, or provide any personal details to access our resources.</li>
+            <li>No Tracking or Analytics: We do not use tracking mechanisms, cookies, or analytics tools that gather personal data. Your activity on our platform remains anonymous and private.</li>
+        </ol>
+
+        <h2>3. Use of Cloudflare Services</h2>
+        <p>While we do not collect any personal information, please be aware that Populi Advocātiō uses Cloudflare services to enhance the security and performance of our website. Cloudflare may process limited technical data (such as IP addresses) as part of its service, but this is outside of our control and is governed by Cloudflare’s own privacy practices.</p>
+        <ol>
+            <li>Cloudflare’s Role: Cloudflare acts as a content delivery network (CDN) and provides security measures to protect our website from malicious activities. Any data processed by Cloudflare is subject to their privacy policy, not ours.</li>
+            <li>Your Privacy: We emphasize that we do not have access to any data that may be processed by Cloudflare. Populi Advocātiō does not use, store, or share any personal information.</li>
+        </ol>
+
+        <h2>4. Focus on Resource Delivery</h2>
+        <p>Our mission at Populi Advocātiō is to deliver rich, reliable, and well-researched resources to our users. We do not require any personal information to fulfill this mission. Our content is freely accessible, and our focus remains on providing valuable insights in finance, geopolitics, and journalism.</p>
+        <ol>
+            <li>Transparency: We maintain full transparency in our operations and are committed to upholding the highest standards of integrity and trust.</li>
+            <li>No Third-Party Sharing: Since we do not collect personal information, there is nothing to share with third parties. Your privacy is fully respected.</li>
+        </ol>
+
+        <h2>5. Changes to This Policy</h2>
+        <p>Populi Advocātiō reserves the right to update or modify this Privacy Policy at any time. Any changes will be reflected on this page, and the date of the latest update will be indicated at the bottom of the policy. We encourage you to review this policy periodically to stay informed about how we are protecting your privacy.</p>
+
+        <h2>6. Contact Information</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, or if you need further information, please contact us at @ave.33 on Signal. We are here to address any issues you may have and ensure that your experience with Populi Advocātiō remains secure and private.</p>
+    </section>
 
     <!-- Footer -->
     <div class="footer">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Legal</h3>
-                <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
-                <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
-            </div>
-            <div class="footer-column">
-                <h3>Organisation</h3>
-                <a href="https://apgo.ink/career" target="_blank">Career Options</a>
-                <a href="https://apgo.ink/imprint" target="_blank">Imprint and About Us</a>
-            </div>
-            <div class="footer-column">
-                <h3>Support</h3>
-                <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
-                <a href="https://apgo.ink/ccs" target="_blank">Crypto Cipher Studios Information</a>
-            </div>
-            <div class="footer-column">
-                <h3>Navigation</h3>
-                <a href="https://apgo.ink">Home</a>
-                <a href="#mission">Back to Top</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Populi Advocātiō - Content is available under an Irrevocable Public Use License with specific conditions.</p>
-        </div>
+        <a href="https://apgo.ink/donation" target="_blank">Donate</a>
+        <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
+        <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
+        <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Particles.js background decoration
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 5,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
 
 </body>
 </html>

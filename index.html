@@ -1,192 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Populi Advocātiō</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #007BFF;
-            --secondary: #6C63FF;
-            --light-bg: #f5f7fa;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--light-bg);
-            color: #333;
-            line-height: 1.6;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background: #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .links a {
-            margin: 0 15px;
-            color: #333;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        nav .links a:hover { color: var(--primary); }
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100vh;
-            background: linear-gradient(135deg,var(--primary),var(--secondary));
-            color: #fff;
-            flex-direction: column;
-            padding: 0 20px;
-        }
-        .hero h1 { font-size: 4em; margin-bottom: 10px; font-weight: 800; }
-        .hero p { font-size: 1.4em; margin-bottom: 25px; }
-        .hero .btn {
-            padding: 12px 28px;
-            background: #fff;
-            color: var(--primary);
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background .3s;
-            text-decoration: none;
-        }
-        .hero .btn:hover { background: #0056b3; color: #fff; }
-        .section { padding: 80px 20px; text-align: center; }
-        .section h2 { font-size: 2.6em; margin-bottom: 20px; color: #333; font-weight: 800; }
-        .section p { font-size: 1.2em; color: #666; max-width: 800px; margin: 0 auto; }
-        .cards { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; max-width: 1100px; margin: 40px auto; }
-        .card {
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            width: 45%;
-            max-width: 500px;
-            text-align: center;
-            transition: transform .3s, box-shadow .3s;
-            cursor: pointer;
-        }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-        .card h3 { font-size: 1.8em; margin-bottom: 10px; color: #333; font-weight: 600; }
-        .card p { color: #666; font-size: 1em; }
-        .resources { background: var(--light-bg); padding: 60px 20px; }
-        .resource-card {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            text-decoration: none;
-            color: #333;
-            max-width: 700px;
-            margin: 10px auto;
-        }
-        .resource-card img { width: 100px; height: 100px; border-radius: 10px; }
-        .resource-card .icon-box {
-            width: 100px; height: 100px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2em; font-weight: 800; border-radius: 10px; color: #fff;
-        }
-        .dictionary-icon{ background: #e0e7ff; color: var(--primary); }
-        .culture-icon{ background: #4caf50; }
-        .cuisine-icon{ background: #ff5722; }
-        .beverage-icon{ background: #2196f3; }
-        footer { background: #333; color: #fff; padding: 40px 20px; text-align: center; }
-        footer a { color: #fff; text-decoration: none; margin: 0 10px; }
-        footer a:hover { color: var(--secondary); }
-        footer p { margin-top: 20px; font-size: .9em; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Populi Advocātiō</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">Populi Advocātiō</div>
-        <div class="links">
-            <a href="#mission">Mission</a>
-            <a href="#services">Services</a>
-            <a href="#resources">Resources</a>
-            <a href="https://apgo.ink/contactus" target="_blank">Contact</a>
-        </div>
-    </nav>
-    <section class="hero">
-        <h1>Populi Advocātiō</h1>
-        <p>Advocating for the people.</p>
-        <a class="btn" href="https://apgo.ink/aboutus">Learn More</a>
-    </section>
-    <section id="mission" class="section">
-        <h2>Our Mission</h2>
-        <p>Bringing humanity one step closer to global peace and universal education, through advocacy.</p>
-    </section>
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="cards">
-            <div class="card" onclick="window.location.href='https://apgo.ink/journal'">
-                <h3>Journalism</h3>
-                <p>In-depth investigations into critical global events and their impact on society.</p>
-            </div>
-            <div class="card" onclick="window.location.href='https://apgo.ink/intelligence'">
-                <h3>Intelligence</h3>
-                <p>Analyzing global data to inform decisions and reveal potential risks.</p>
-            </div>
-        </div>
-    </section>
-    <section id="resources" class="resources">
-        <h2>Resources</h2>
-        <p class="resource-intro">Explore our curated resources designed to educate and inform you about the world.</p>
-        <a href="https://apgo.ink/basilisk" class="resource-card" target="_blank">
-            <img src="basiliskicon.png" alt="Basilisk Logo">
-            <div>
-                <h3>Basilisk App (Coming Soon)</h3>
-                <p>An all-in-one platform prioritizing user privacy.</p>
-            </div>
-        </a>
-        <a href="https://apgo.ink/dictionary" class="resource-card" target="_blank">
-            <div class="icon-box dictionary-icon">D</div>
-            <div>
-                <h3>Dictionary</h3>
-                <p>A comprehensive dictionary for words in the English language.</p>
-            </div>
-        </a>
-        <a href="https://apgo.ink/cultures" class="resource-card" target="_blank">
-            <div class="icon-box culture-icon">CE</div>
-            <div>
-                <h3>Culture Explorer</h3>
-                <p>Learn about cultures around the world and their unique characteristics.</p>
-            </div>
-        </a>
-        <a href="https://apgo.ink/cuisines" class="resource-card" target="_blank">
-            <div class="icon-box cuisine-icon">C</div>
-            <div>
-                <h3>Cuisines from Around the World</h3>
-                <p>Explore extensive information about global cuisines and culinary traditions.</p>
-            </div>
-        </a>
-        <a href="https://apgo.ink/beverages" class="resource-card" target="_blank">
-            <div class="icon-box beverage-icon">B</div>
-            <div>
-                <h3>Beverages from Around the World</h3>
-                <p>Discover a wide range of beverages from various cultures and their origins.</p>
-            </div>
-        </a>
-    </section>
-    <footer>
-        <a href="https://apgo.ink/donation" target="_blank">Donate</a>
-        <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
-        <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
-        <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
-        <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
-    </footer>
+  <nav>
+    <div class="logo">Populi Advocātiō</div>
+    <div class="links">
+      <a href="https://apgo.ink/journal">Journal</a>
+      <a href="https://apgo.ink/intelligence">Intelligence</a>
+      <button class="theme-toggle">Toggle Theme</button>
+    </div>
+  </nav>
+  <header class="hero">
+    <h1>Populi Advocātiō</h1>
+    <p>What we do: provide clear journalism and actionable intelligence for everyone.</p>
+  </header>
+  <section class="section fade-up">
+    <div class="cards">
+      <a class="card" href="https://apgo.ink/journal">
+        <h3>Journal</h3>
+        <p>Deep dives into world events.</p>
+      </a>
+      <a class="card" href="https://apgo.ink/intelligence">
+        <h3>Intelligence</h3>
+        <p>Finance and policy analysis.</p>
+      </a>
+    </div>
+  </section>
+  <footer>
+    <a href="https://apgo.ink/donation" target="_blank">Donate</a>
+    <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
+    <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
+    <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
+    <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
+  </footer>
+  <script src="theme.js"></script>
 </body>
 </html>

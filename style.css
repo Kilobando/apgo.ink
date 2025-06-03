@@ -1,0 +1,139 @@
+/* Main theme styles */
+:root {
+  --background: #0d1117;   /* dark background */
+  --foreground: #c9d1d9;   /* light text */
+  --accent: #58a6ff;       /* bright blue accent */
+  --background-light: #ffffff;
+  --foreground-light: #1a1a1a;
+  --secondary: #8b949e;
+}
+body.light {
+  --background: var(--background-light);
+  --foreground: var(--foreground-light);
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(13,17,23,0.8);
+  z-index: 1000;
+}
+nav a {
+  color: var(--foreground);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+nav a:hover {
+  color: var(--accent);
+}
+.theme-toggle {
+  cursor: pointer;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg,#0a84ff,#5a189a);
+  color: #fff;
+  animation: fadeIn 1s ease-out;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 2rem;
+  width: 280px;
+  transition: transform .3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+}
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  color: var(--foreground);
+  text-decoration: none;
+}
+.resource-card img,
+.resource-card .icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+footer {
+  background: #161b22;
+  color: var(--foreground);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+footer a {
+  color: var(--accent);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);}
+}
+
+/* simple fade-up animation for sections */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}

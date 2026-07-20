@@ -1,90 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Populi Advocātiō</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="APGO is an independent journal and public-interest project studio covering world affairs, football, books and systems.">
+  <meta name="theme-color" content="#163126">
+  <meta property="og:title" content="APGO — Independent journalism and public-interest projects">
+  <meta property="og:description" content="A home for the APGO Journal, Football Index, open reference work and experiments built in public.">
+  <meta property="og:image" content="https://apgo.ink/assets/images/maritime-power.webp">
+  <meta property="og:type" content="website">
+  <title>APGO — Journalism, rankings and public-interest projects</title>
+  <link rel="canonical" href="https://apgo.ink/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/apgo.css">
+  <script src="/assets/js/apgo.js" defer></script>
 </head>
 <body>
-  <nav>
-    <div class="logo">Populi Advocātiō</div>
-    <div class="links">
-      <a href="#mission">Mission</a>
-      <a href="#services">Services</a>
-      <a href="#resources">Resources</a>
-      <a href="https://apgo.ink/contactus" target="_blank">Contact</a>
-      <button class="theme-toggle">Toggle Theme</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reader-strip"><div class="reader-strip__inner page-shell"><span>Populi Advocātiō · Independent by design</span><a href="#support">Support APGO</a></div></div>
+  <header class="home-header">
+    <div class="home-header__inner page-shell">
+      <a class="home-brand" href="/">APGO</a>
+      <nav class="home-nav" aria-label="Primary navigation">
+        <a href="/journal/">Journal</a>
+        <a href="/football/">Football Index</a>
+        <a href="/dictionary/">Dictionary</a>
+        <a href="/contactus/">Contact</a>
+        <a class="button button--outline" href="#support">Support</a>
+      </nav>
     </div>
-  </nav>
-  <section class="hero">
-    <h1>Populi Advocātiō</h1>
-    <p>Advocating for the people through transparent journalism and research.</p>
-    <a class="theme-toggle" href="#mission">Explore</a>
-  </section>
-  <section id="mission" class="section fade-up">
-    <h2>Our Mission</h2>
-    <p>Bringing humanity closer to global peace and universal education through advocacy.</p>
-  </section>
-  <section id="services" class="section fade-up">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card" onclick="location.href='https://apgo.ink/journal'">
-        <h3>Journalism</h3>
-        <p>Investigations into critical global events and their societal impact.</p>
-      </div>
-      <div class="card" onclick="location.href='https://apgo.ink/intelligence'">
-        <h3>Intelligence</h3>
-        <p>Analyzing data to inform decisions and reveal potential risks.</p>
-      </div>
-    </div>
-  </section>
-  <section id="resources" class="section fade-up">
-    <h2>Resources</h2>
-    <a href="https://apgo.ink/basilisk" class="resource-card" target="_blank">
-      <img src="basiliskicon.png" alt="Basilisk logo">
+  </header>
+
+  <main id="main">
+    <section class="home-hero page-shell" aria-labelledby="home-title">
       <div>
-        <h3>Basilisk App (Coming Soon)</h3>
-        <p>An all-in-one platform prioritizing user privacy.</p>
+        <span class="eyebrow">Journalism · Research · Public tools</span>
+        <h1 id="home-title">Make important things legible.</h1>
+        <p class="home-hero__intro">APGO is an independent journal and project studio for world affairs, football, books and the systems that shape public life. We publish the evidence, show the method and keep the work open.</p>
+        <div class="home-hero__actions">
+          <a class="button" href="/journal/">Read APGO Journal</a>
+          <a class="button button--outline" href="#projects">Explore the projects</a>
+        </div>
       </div>
-    </a>
-    <a href="https://apgo.ink/dictionary" class="resource-card" target="_blank">
-      <div class="icon-box" style="background:#e0e7ff;color:#0a84ff;display:flex;align-items:center;justify-content:center;font-weight:700;">D</div>
-      <div>
-        <h3>Dictionary</h3>
-        <p>A comprehensive dictionary for words in the English language.</p>
+      <figure class="home-hero__feature">
+        <img src="/assets/images/maritime-power.webp" width="1536" height="1024" alt="Engraved maritime map illustrating APGO's lead story">
+        <figcaption><span>Journal · Lead story</span><strong>The New Geography of Power Runs Through the Sea</strong></figcaption>
+      </figure>
+    </section>
+
+    <section class="section page-shell" id="projects" aria-labelledby="projects-heading">
+      <div class="section-heading">
+        <div><span class="eyebrow">The APGO system</span><h2 id="projects-heading">One organization, several serious products.</h2></div>
+        <p>The journal is the editorial core. Rankings and reference projects turn the same standards—context, transparency and revision—into useful public tools.</p>
       </div>
-    </a>
-    <a href="https://apgo.ink/cultures" class="resource-card" target="_blank">
-      <div class="icon-box" style="background:#4caf50;display:flex;align-items:center;justify-content:center;font-weight:700;">CE</div>
-      <div>
-        <h3>Culture Explorer</h3>
-        <p>Learn about cultures around the world and their unique characteristics.</p>
+      <div class="project-grid">
+        <a class="project-card" href="/journal/"><span class="project-card__status">Live · Edition 001</span><h3>APGO Journal</h3><p>World affairs, football, books and ideas in a calm, source-visible publication built for reading rather than scrolling.</p></a>
+        <a class="project-card" href="/football/"><span class="project-card__status">In development · Method v0.1</span><h3>Football Index</h3><p>An independent, position-aware ranking of elite players with public weights, uncertainty and an archive of every revision.</p></a>
+        <a class="project-card" href="/dictionary/"><span class="project-card__status">Live · Expanding</span><h3>APGO Dictionary</h3><p>A reference project that treats definitions as compact arguments: sourced, revised and connected to culture and public life.</p></a>
+        <article class="project-card"><span class="project-card__status">Roadmap · Research phase</span><h3>Culture &amp; Systems Atlas</h3><p>Future explainers, maps and structured guides to institutions, cuisines, cultures and the infrastructure behind everyday life.</p></article>
       </div>
-    </a>
-    <a href="https://apgo.ink/cuisines" class="resource-card" target="_blank">
-      <div class="icon-box" style="background:#ff5722;display:flex;align-items:center;justify-content:center;font-weight:700;">C</div>
-      <div>
-        <h3>Cuisines</h3>
-        <p>Explore information about global cuisines and culinary traditions.</p>
+    </section>
+
+    <section class="section page-shell" aria-labelledby="journal-preview-heading">
+      <div class="section-heading"><div><span class="eyebrow">From the journal</span><h2 id="journal-preview-heading">Three doors into the world.</h2></div><a class="text-link" href="/journal/">Open the journal</a></div>
+      <div class="stories-grid">
+        <article class="story-card"><a class="story-card__image" href="/journal/stories/geography-of-power/"><img src="/assets/images/maritime-power.webp" width="1536" height="1024" loading="lazy" alt="Engraved map of Indian Ocean routes"></a><span class="eyebrow">World</span><h3><a href="/journal/stories/geography-of-power/">The New Geography of Power Runs Through the Sea</a></h3><p>Shipping lanes and undersea cables form a single strategic map.</p><div class="story-meta"><span>9 min read</span><span>Analysis</span></div></article>
+        <article class="story-card"><a class="story-card__image" href="/journal/stories/football-without-rest/"><img src="/assets/images/football-calendar.webp" width="1536" height="1024" loading="lazy" alt="Football pitch covered in workload routes"></a><span class="eyebrow">Football</span><h3><a href="/journal/stories/football-without-rest/">Football’s Bigger Calendar Has a Smaller Margin for Rest</a></h3><p>More spectacle, less recovery and a design problem the sport can measure.</p><div class="story-meta"><span>7 min read</span><span>Evidence note</span></div></article>
+        <article class="story-card"><a class="story-card__image" href="/journal/stories/underground-man-and-the-feed/"><img src="/assets/images/literature-underground.webp" width="1536" height="1024" loading="lazy" alt="Book becoming stairs into an underground corridor"></a><span class="eyebrow">Books &amp; Ideas</span><h3><a href="/journal/stories/underground-man-and-the-feed/">Dostoevsky’s Underground Man Was Built for the Feed</a></h3><p>An 1864 narrator explains the inner machinery of posting.</p><div class="story-meta"><span>8 min read</span><span>Essay</span></div></article>
       </div>
-    </a>
-    <a href="https://apgo.ink/beverages" class="resource-card" target="_blank">
-      <div class="icon-box" style="background:#2196f3;display:flex;align-items:center;justify-content:center;font-weight:700;">B</div>
-      <div>
-        <h3>Beverages</h3>
-        <p>Discover beverages from various cultures and their origins.</p>
+    </section>
+
+    <section class="section page-shell" aria-labelledby="standard-heading">
+      <div class="section-heading"><div><span class="eyebrow">Working rules</span><h2 id="standard-heading">Build trust into the format.</h2></div><p>APGO’s projects can look different. Their underlying obligations should stay the same.</p></div>
+      <div class="principles-grid">
+        <article class="principle"><span class="principle__number">01</span><h3>Label the kind of claim</h3><p>News, analysis, opinion, methodology and experiment are not interchangeable. Readers should know which one they are entering.</p></article>
+        <article class="principle"><span class="principle__number">02</span><h3>Show the original material</h3><p>Whenever possible, facts link to the document, dataset or text that supports them—not a chain of recycled summaries.</p></article>
+        <article class="principle"><span class="principle__number">03</span><h3>Revise in public</h3><p>Corrections and model changes remain visible. A growing project earns authority by improving without rewriting its own history.</p></article>
       </div>
-    </a>
-  </section>
-  <footer>
-    <a href="https://apgo.ink/donation" target="_blank">Donate</a>
-    <a href="https://apgo.ink/tos" target="_blank">Terms of Service</a>
-    <a href="https://apgo.ink/pp" target="_blank">Privacy Policy</a>
-    <a href="https://apgo.ink/contactus" target="_blank">Contact Us</a>
-    <p>&copy; 2024 Populi Advocātiō. All rights reserved.</p>
-  </footer>
-  <script src="theme.js"></script>
+    </section>
+
+    <section class="section section--compact page-shell" id="support" aria-labelledby="support-heading">
+      <div class="funding-panel">
+        <div class="funding-panel__intro"><span class="eyebrow" style="color:#f1c4ca">Reader funded</span><h2 id="support-heading">Help make the next thing real.</h2><p>Support funds reporting, data access, design and infrastructure. It never purchases editorial influence or a preferred ranking.</p></div>
+        <div class="funding-panel__action"><span class="wallet-label">Bitcoin · BTC network</span><code class="wallet-address">bc1q2wqpdzhgc90jn0r797yxv62pcnr06d2s0nlv8h</code><div class="copy-row"><button class="button button--paper" type="button" data-copy="bc1q2wqpdzhgc90jn0r797yxv62pcnr06d2s0nlv8h" aria-describedby="copy-status">Copy address</button><a class="button button--outline" style="color:#fff;border-color:#fff" href="bitcoin:bc1q2wqpdzhgc90jn0r797yxv62pcnr06d2s0nlv8h">Open wallet</a><span class="copy-status" id="copy-status" role="status" aria-live="polite"></span></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-shell"><div class="footer-grid"><div class="footer-brand"><strong>Populi Advocātiō</strong><p>Independent journalism, open methods and public-interest projects. APGO is built deliberately and revised in public.</p></div><div class="footer-column"><strong>Read</strong><a href="/journal/">Journal</a><a href="/football/">Football Index</a><a href="/dictionary/">Dictionary</a></div><div class="footer-column"><strong>Follow the work</strong><a href="/journal/#principles">Editorial standard</a><a href="/football/#method">Ranking method</a><a href="/contactus/">Contact</a></div><div class="footer-column"><strong>Legal</strong><a href="/pp/">Privacy</a><a href="/tos/">Terms</a></div></div><div class="footer-bottom"><span>© <span data-current-year>2026</span> Populi Advocātiō.</span><span>Independent by design.</span></div></div></footer>
 </body>
 </html>
